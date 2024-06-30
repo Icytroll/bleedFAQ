@@ -43,9 +43,7 @@ These **DO NOT** work
 
 Gushing Wounds is a Barbarian Key Passive that greatly augments our bleeds by letting them interact with our Critical Strike Chance (CHC) and Critical Strike Damage (CSD). The ability tooltip can be seen below, however I'd like to rewrite that description with how it actually works in-game:
 
-```
-When causing an enemy to bleed, you have a chance equal to [the "Critical Strike Chance" stat in your statsheet] to increase the bleed by an amount equal to [the "Critical Strike Damage" stat in your statsheet].
-```
+**_When causing an enemy to bleed, you have a chance equal to [the "Critical Strike Chance" stat in your statsheet] to increase the bleed by an amount equal to [the "Critical Strike Damage" stat in your statsheet]._**
 
 ![Gushing Wounds tooltip](images/GW.png)
 
