@@ -12,6 +12,8 @@ A few quick facts about bleeds:
 
 ## Snapshotting
 
+d
+
 ## 2H sword expertise
 
 The Barbarian's weapon arsenal also holds
@@ -20,7 +22,7 @@ The Barbarian's weapon arsenal also holds
 
 The Berserk Ripping aspect in a special case of bleed for barbarian as the bleed damaged scales with the **base** damage of any direct damage you deal while berserking, and is not a fixed amount determined by a skill percentage via e.g. Flay or Rend. This can create some very powerful combinations if we can find interactions with very large direct hits that count as base damage.
 
-![Gushing Wounds tooltip](images/BR.PNG)
+![Gushing Wounds tooltip](images/BR.png)
 
 These **DO** work
 
@@ -37,20 +39,6 @@ These **DO NOT** work
 - Edgemaster's aspect
 - Ramalamadingdong
 
-### Paingorger's
-
-These **DO** work
-
-- Elements aspect
-- Inner Calm aspect
-- Moonrise aspect
-
-These **DO NOT** work
-
-- Edgemaster
-- Adaptability
-- Ramalamadingdong
-
 ## Gushing Wounds
 
 Gushing Wounds is a Barbarian Key Passive that greatly augments our bleeds by letting them interact with our Critical Strike Chance (CHC) and Critical Strike Damage (CSD). The ability tooltip can be seen below, however I'd like to rewrite that description with how it actually works in-game:
@@ -59,11 +47,11 @@ Gushing Wounds is a Barbarian Key Passive that greatly augments our bleeds by le
 When causing an enemy to bleed, you have a chance equal to [the "Critical Strike Chance" stat in your statsheet] to increase the bleed by an amount equal to [the "Critical Strike Damage" stat in your statsheet].
 ```
 
-![Gushing Wounds tooltip](images/GW.PNG)
+![Gushing Wounds tooltip](images/GW.png)
 
 In short, Gushing Wounds directly uses the numbers in the "Critical Strike Chance" and "Critical Strike Damage" categories from the stat sheet to calculate if a bleed crits and how big that crit is going to be. For example, in the below image a bleed would have a 67.7% chance to have its total bleed amount increased by 3672.6%.
 
-![Gushing Wounds tooltip](images/statsheetCrit.PNG)
+![Gushing Wounds tooltip](images/statsheetCrit.png)
 
 This is very unusual because almost every single ability in the game does **not** use the up-front stat sheet values to calculate their values, but the **raw** amounts gained from gear and paragon boards (green box in the image below). You might ask, well aren't the immediatetly up-front values correct? Yes and no, though more no than yes.
 
@@ -77,7 +65,7 @@ where `rawCSD%` is the number shown in the green box, `HH%` is the multiplicativ
 
 One thing to be clear about with the total statsheet CSD is that it tells you the amount of damage you will do when you crit, not the amount that is added onto a regular attack when critting. Not only can this be slightly unintuitive depending on how one thinks about critical strikes in general, but it's certainly misleading in the sense that this value is described as "Extra damage granted to Skills when they Critically Strike", which is absolutely not the general case when a crit is calculated. I won't go too far into this here, just know that you should **never** assume that the magenta value is being used by the game for calculations, it's merely an (incorrect) attempt by Blizzard to show the player how hard their crits hit for. **Always** use the raw CSD value (green) to do calculations with.
 
-![Gushing Wounds tooltip](images/rawCrit.PNG)
+![Gushing Wounds tooltip](images/rawCrit.png)
 
 With all that being said, Gushing Wounds is a rare exception to this pattern of the game using raw values for calculations. When using it as a crit multiplier in damage calculations for bleeds we simply write:
 
