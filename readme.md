@@ -1,1 +1,1 @@
-[Link to Wiki](../../wiki)
+[Go to the Wiki](../../wiki)
